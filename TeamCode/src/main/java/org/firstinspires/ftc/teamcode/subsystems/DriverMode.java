@@ -29,6 +29,15 @@ public class DriverMode extends LinearOpMode {
 
         while (opModeIsActive()) {
             telemetry.update();
+
+            if (gamepad2.left_stick_y > 0.1 || gamepad2.left_stick_y < -0.1) {
+                robot.motoare.putereStanga(2 * gamepad2.left_stick_y);
+                telemetry.addData("left stick: ", gamepad2.left_stick_y);
+            } else robot.motoare.putereStanga(0);
+            if (gamepad2.right_stick_y > 0.1 || gamepad2.right_stick_y < -0.1) {
+                robot.motoare.putereDreapta(2 * gamepad2.right_stick_y);
+                telemetry.addData("right stick: ", gamepad2.right_stick_y);
+            } else robot.motoare.putereDreapta(0);
         }
     }
 }
