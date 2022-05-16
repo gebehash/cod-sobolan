@@ -40,4 +40,4 @@ public class DriverMode extends LinearOpMode {
             } else robot.motoare.putereDreapta(0);
         }
     }
-}
+}//da
