@@ -2,15 +2,15 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-import org.firstinspires.ftc.teamcode.subsystems.Motoare;
+import org.firstinspires.ftc.teamcode.subsystems.Sasiu;
 
 public class Robot {
     private boolean initialize;
-    public Motoare motoare;
+    public Sasiu motoare;
 
     public Robot(HardwareMap hardwareMap) {
         initialize = true;
-        motoare = new Motoare(hardwareMap);
+        motoare = new Sasiu(hardwareMap);
         initialize = false;
     }
 

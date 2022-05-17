@@ -4,10 +4,10 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class Motoare {
+public class Sasiu {
     private DcMotor motorL, motorR;
 
-    public Motoare(HardwareMap hardwareMap) {
+    public Sasiu(HardwareMap hardwareMap) {
         motorR = hardwareMap.dcMotor.get("motorR");
         motorL = hardwareMap.dcMotor.get("motorL");
 
