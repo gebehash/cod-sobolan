@@ -35,7 +35,7 @@ public class DriverMode extends LinearOpMode {
 
             boolean moveType = false;
 
-            if (!moveType) {
+//            if (!moveType) {
 
                 if (gamepad1.left_stick_y > 0.1 || gamepad1.left_stick_y < -0.1) {
                     robot.motoare.putereStanga(2 * gamepad1.left_stick_y);
@@ -47,29 +47,29 @@ public class DriverMode extends LinearOpMode {
                     telemetry.addData("right stick: ", gamepad1.right_stick_y);
                 } else robot.motoare.putereDreapta(0);
 
-            } else {
-                if (gamepad1.right_trigger > 0.1) {
-                    robot.motoare.putereStanga(2 * gamepad1.right_trigger);
-                    robot.motoare.putereDreapta(2 * gamepad1.right_trigger);
-                    telemetry.addData("forward: ", gamepad1.right_trigger);
-                }
-
-                if (gamepad1.left_trigger > 0.1) {
-                    robot.motoare.putereStanga(-2 * gamepad1.left_trigger);
-                    robot.motoare.putereDreapta(-2 * gamepad1.left_trigger);
-                    telemetry.addData("reverse: ",gamepad1.left_trigger);
-                }
-            }
-
-            if (gamepad1.dpad_right && !moveType) {
-                moveType = true;
-                telemetry.addData("moveType", moveType);
-            }
-
-            if (gamepad1.dpad_right && moveType) {
-                moveType = false;
-                telemetry.addData("moveType", moveType);
-            }
+//            } else {
+//                if (gamepad1.right_trigger > 0.1) {
+//                    robot.motoare.putereStanga(2 * gamepad1.right_trigger);
+//                    robot.motoare.putereDreapta(2 * gamepad1.right_trigger);
+//                    telemetry.addData("forward: ", gamepad1.right_trigger);
+//                }
+//
+//                if (gamepad1.left_trigger > 0.1) {
+//                    robot.motoare.putereStanga(-2 * gamepad1.left_trigger);
+//                    robot.motoare.putereDreapta(-2 * gamepad1.left_trigger);
+//                    telemetry.addData("reverse: ",gamepad1.left_trigger);
+//                }
+//            }
+//
+//            if (gamepad1.dpad_right && !moveType) {
+//                moveType = true;
+//                telemetry.addData("moveType", moveType);
+//            }
+//
+//            if (gamepad1.dpad_right && moveType) {
+//                moveType = false;
+//                telemetry.addData("moveType", moveType);
+//            }
             telemetry.update();
         }
     }
