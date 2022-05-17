@@ -49,14 +49,14 @@ public class DriverMode extends LinearOpMode {
 
             } else {
                 if (gamepad1.right_trigger > 0.1) {
-                    robot.motoare.putereStanga(2 * gamepad1.left_stick_y);
-                    robot.motoare.putereDreapta(2 * gamepad1.right_stick_y);
+                    robot.motoare.putereStanga(2 * gamepad1.right_trigger);
+                    robot.motoare.putereDreapta(2 * gamepad1.right_trigger);
                     telemetry.addData("forward: ", gamepad1.right_trigger);
                 }
 
                 if (gamepad1.left_trigger > 0.1) {
-                    robot.motoare.putereStanga(-2 * gamepad1.left_stick_y);
-                    robot.motoare.putereDreapta(-2 * gamepad1.right_stick_y);
+                    robot.motoare.putereStanga(-2 * gamepad1.left_trigger);
+                    robot.motoare.putereDreapta(-2 * gamepad1.left_trigger);
                     telemetry.addData("reverse: ",gamepad1.left_trigger);
                 }
             }
